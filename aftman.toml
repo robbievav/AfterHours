@@ -1,0 +1,9 @@
+[tools]
+# Rojo — syncs your src/ folder into Roblox Studio
+rojo = "rojo-rbx/rojo@7.4.4"
+
+# Selene — Luau linter (optional but recommended)
+selene = "Kampfkarren/selene@0.27.1"
+
+# StyLua — Luau code formatter
+stylua = "JohnnyMorganz/StyLua@0.20.0"
