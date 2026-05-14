@@ -41,6 +41,12 @@
         },
         "DJBooth": {
           "$className": "RemoteEvent"
+        },
+        "EmoteChanged": {
+          "$className": "RemoteEvent"
+        },
+        "ClockSync": {
+          "$className": "RemoteEvent"
         }
       }
     },

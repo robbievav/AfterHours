@@ -1,0 +1,19 @@
+-- Selene configuration for After Hours
+-- Tells the Selene linter which globals are available in a Roblox environment
+
+std = "roblox"
+
+[rules]
+-- Enforce good practices
+empty_if = "warn"
+global_usage = "warn"
+incorrect_standard_library_use = "deny"
+manual_table_clone = "warn"
+mismatched_arg_count = "warn"
+mixed_table = "warn"
+must_use = "warn"
+shadowing = "warn"
+suspicious_reverse_loop = "deny"
+unbalanced_assignments = "warn"
+undefined_variable = "deny"
+unused_variable = "warn"
