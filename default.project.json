@@ -47,6 +47,9 @@
         },
         "ClockSync": {
           "$className": "RemoteEvent"
+        },
+        "ChalkboardUpdated": {
+          "$className": "RemoteEvent"
         }
       }
     },
