@@ -1,0 +1,56 @@
+{
+  "name": "AfterHours",
+  "tree": {
+    "$className": "DataModel",
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Shared": {
+        "$path": "src/shared"
+      },
+      "Remotes": {
+        "$className": "Folder",
+        "ZoneChanged": {
+          "$className": "RemoteEvent"
+        },
+        "MidnightEvent": {
+          "$className": "RemoteEvent"
+        },
+        "GraffitiUpdated": {
+          "$className": "RemoteEvent"
+        },
+        "BoomboxFrequency": {
+          "$className": "RemoteEvent"
+        },
+        "DJBooth": {
+          "$className": "RemoteEvent"
+        }
+      }
+    },
+
+    "SoundService": {
+      "$className": "SoundService"
+    },
+
+    "Lighting": {
+      "$className": "Lighting"
+    }
+  }
+}
