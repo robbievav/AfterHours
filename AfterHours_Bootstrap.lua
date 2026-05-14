@@ -432,42 +432,60 @@ mapPart("Floor_Boiler",  Vector3.new(30,1,30),   Vector3.new(0,0,100),    Color3
 
 -- ── GYMNASIUM WALLS + CEILING ────────────────────────────────
 local GC = Color3.fromRGB(30,12,52)
-mapPart("Gym_N",    Vector3.new(60,14,1),  Vector3.new(0,7,-25.5),  GC)
-mapPart("Gym_S",    Vector3.new(60,14,1),  Vector3.new(0,7,25.5),   GC)
-mapPart("Gym_E",    Vector3.new(1,14,50),  Vector3.new(30.5,7,0),   GC)
-mapPart("Gym_W",    Vector3.new(1,14,50),  Vector3.new(-30.5,7,0),  GC)
-mapPart("Gym_Ceil", Vector3.new(60,1,50),  Vector3.new(0,14.5,0),   Color3.fromRGB(18,8,38))
-neonStrip("Gym_Strip_N", Vector3.new(58,0.4,0.3), Vector3.new(0,14,-24),   Color3.fromRGB(220,0,255))
-neonStrip("Gym_Strip_S", Vector3.new(58,0.4,0.3), Vector3.new(0,14,24),    Color3.fromRGB(180,0,220))
-neonStrip("Gym_Strip_E", Vector3.new(0.3,0.4,48), Vector3.new(29,14,0),    Color3.fromRGB(0,180,255))
-neonStrip("Gym_Strip_W", Vector3.new(0.3,0.4,48), Vector3.new(-29,14,0),   Color3.fromRGB(0,180,255))
+mapPart("Gym_N",      Vector3.new(60,14,1),  Vector3.new(0,7,-25.5),    GC)
+-- Gym South wall — split for north-hall doorway (x ±6, h 10)
+mapPart("Gym_S_E",    Vector3.new(19,14,1),  Vector3.new(14.5,7,25.5),  GC)
+mapPart("Gym_S_W",    Vector3.new(19,14,1),  Vector3.new(-14.5,7,25.5), GC)
+mapPart("Gym_S_Top",  Vector3.new(12,4,1),   Vector3.new(0,12,25.5),    GC)
+-- Gym East wall — split for east-hall doorway (z ±6, h 10)
+mapPart("Gym_E_N",    Vector3.new(1,14,20),  Vector3.new(30.5,7,-17.5), GC)
+mapPart("Gym_E_S",    Vector3.new(1,14,20),  Vector3.new(30.5,7,17.5),  GC)
+mapPart("Gym_E_Top",  Vector3.new(1,4,12),   Vector3.new(30.5,12,0),    GC)
+-- Gym West wall — split for west-hall doorway (z ±6, h 10)
+mapPart("Gym_W_N",    Vector3.new(1,14,20),  Vector3.new(-30.5,7,-17.5),GC)
+mapPart("Gym_W_S",    Vector3.new(1,14,20),  Vector3.new(-30.5,7,17.5), GC)
+mapPart("Gym_W_Top",  Vector3.new(1,4,12),   Vector3.new(-30.5,12,0),   GC)
+mapPart("Gym_Ceil",   Vector3.new(60,1,50),  Vector3.new(0,14.5,0),     Color3.fromRGB(18,8,38))
+neonStrip("Gym_Strip_N", Vector3.new(58,0.4,0.3), Vector3.new(0,14,-24),  Color3.fromRGB(220,0,255))
+neonStrip("Gym_Strip_S", Vector3.new(58,0.4,0.3), Vector3.new(0,14,24),   Color3.fromRGB(180,0,220))
+neonStrip("Gym_Strip_E", Vector3.new(0.3,0.4,48), Vector3.new(29,14,0),   Color3.fromRGB(0,180,255))
+neonStrip("Gym_Strip_W", Vector3.new(0.3,0.4,48), Vector3.new(-29,14,0),  Color3.fromRGB(0,180,255))
 
 -- ── CAFETERIA WALLS + CEILING ────────────────────────────────
 local CC = Color3.fromRGB(30,18,8)
-mapPart("Cafe_N",    Vector3.new(50,10,1),  Vector3.new(80,5,-20.5), CC)
-mapPart("Cafe_S",    Vector3.new(50,10,1),  Vector3.new(80,5,20.5),  CC)
-mapPart("Cafe_E",    Vector3.new(1,10,40),  Vector3.new(105.5,5,0),  CC)
-mapPart("Cafe_W",    Vector3.new(1,10,40),  Vector3.new(55.5,5,0),   CC)
+mapPart("Cafe_N",    Vector3.new(50,10,1),  Vector3.new(80,5,-20.5),  CC)
+mapPart("Cafe_S",    Vector3.new(50,10,1),  Vector3.new(80,5,20.5),   CC)
+mapPart("Cafe_E",    Vector3.new(1,10,40),  Vector3.new(105.5,5,0),   CC)
+-- Cafe West wall — split for east-hall doorway (z ±6)
+mapPart("Cafe_W_N",  Vector3.new(1,10,14),  Vector3.new(55.5,5,-13),  CC)
+mapPart("Cafe_W_S",  Vector3.new(1,10,14),  Vector3.new(55.5,5,13),   CC)
+mapPart("Cafe_W_Top",Vector3.new(1,2,12),   Vector3.new(55.5,9.5,0),  CC)
 mapPart("Cafe_Ceil", Vector3.new(50,1,40),  Vector3.new(80,10.5,0),  Color3.fromRGB(22,12,5))
 neonStrip("Cafe_Strip1", Vector3.new(48,0.3,0.3), Vector3.new(80,10,-18),  Color3.fromRGB(255,160,40))
 neonStrip("Cafe_Strip2", Vector3.new(48,0.3,0.3), Vector3.new(80,10,18),   Color3.fromRGB(255,140,30))
 
 -- ── LIBRARY WALLS + CEILING ──────────────────────────────────
 local LC = Color3.fromRGB(10,14,28)
-mapPart("Lib_N",    Vector3.new(40,10,1),  Vector3.new(-80,5,-17.5), LC)
-mapPart("Lib_S",    Vector3.new(40,10,1),  Vector3.new(-80,5,17.5),  LC)
-mapPart("Lib_E",    Vector3.new(1,10,35),  Vector3.new(-60.5,5,0),   LC)
-mapPart("Lib_W",    Vector3.new(1,10,35),  Vector3.new(-100.5,5,0),  LC)
+mapPart("Lib_N",     Vector3.new(40,10,1),  Vector3.new(-80,5,-17.5),  LC)
+mapPart("Lib_S",     Vector3.new(40,10,1),  Vector3.new(-80,5,17.5),   LC)
+-- Lib East wall — split for west-hall doorway (z ±6)
+mapPart("Lib_E_N",   Vector3.new(1,10,11.5),Vector3.new(-60.5,5,-9.75),LC)
+mapPart("Lib_E_S",   Vector3.new(1,10,11.5),Vector3.new(-60.5,5,9.75), LC)
+mapPart("Lib_E_Top", Vector3.new(1,2,12),   Vector3.new(-60.5,9.5,0),  LC)
+mapPart("Lib_W",     Vector3.new(1,10,35),  Vector3.new(-100.5,5,0),   LC)
 mapPart("Lib_Ceil", Vector3.new(40,1,35),  Vector3.new(-80,10.5,0),  Color3.fromRGB(8,10,22))
 neonStrip("Lib_Strip1", Vector3.new(38,0.3,0.3), Vector3.new(-80,10,-16), Color3.fromRGB(100,160,255))
 neonStrip("Lib_Strip2", Vector3.new(38,0.3,0.3), Vector3.new(-80,10,16),  Color3.fromRGB(80,140,220))
 
 -- ── BOILER ROOM WALLS + CEILING ──────────────────────────────
 local BC = Color3.fromRGB(25,16,8)
-mapPart("Boil_N",    Vector3.new(30,10,1),  Vector3.new(0,5,115.5),  BC)
-mapPart("Boil_S",    Vector3.new(30,10,1),  Vector3.new(0,5,84.5),   BC)
-mapPart("Boil_E",    Vector3.new(1,10,30),  Vector3.new(15.5,5,100), BC)
-mapPart("Boil_W",    Vector3.new(1,10,30),  Vector3.new(-15.5,5,100),BC)
+mapPart("Boil_N",    Vector3.new(30,10,1),  Vector3.new(0,5,115.5),   BC)
+-- Boiler South wall — split for north-hall doorway (x ±6)
+mapPart("Boil_S_E",  Vector3.new(9,10,1),   Vector3.new(10.5,5,84.5), BC)
+mapPart("Boil_S_W",  Vector3.new(9,10,1),   Vector3.new(-10.5,5,84.5),BC)
+mapPart("Boil_S_Top",Vector3.new(12,2,1),   Vector3.new(0,9.5,84.5),  BC)
+mapPart("Boil_E",    Vector3.new(1,10,30),  Vector3.new(15.5,5,100),  BC)
+mapPart("Boil_W",    Vector3.new(1,10,30),  Vector3.new(-15.5,5,100), BC)
 mapPart("Boil_Ceil", Vector3.new(30,1,30),  Vector3.new(0,10.5,100), Color3.fromRGB(18,10,5))
 neonStrip("Boil_Strip", Vector3.new(28,0.3,0.3), Vector3.new(0,10,86), Color3.fromRGB(180,80,20))
 
@@ -512,27 +530,32 @@ neonStrip("Arch_N_GymSide",  Vector3.new(12,10,0.3), Vector3.new(0,5,25),   Colo
 neonStrip("Arch_N_BoilSide", Vector3.new(12,10,0.3), Vector3.new(0,5,85),   Color3.fromRGB(180,80,20))
 
 -- ── STAIRCASE (Ground → Rooftop) ─────────────────────────────
--- 14 steps from z=-26 climbing north toward rooftop at (0,50,-80)
+-- 10 steps: each 5 studs rise, 5.4 studs run
+-- Starts at z=-26 (outside gym north wall), ends surface at y=50, z=-80
+local RISE = 5
+local RUN  = 5.4
 local stepColor = Color3.fromRGB(35,28,60)
-for i = 0, 13 do
-	local stepFloor = mapPart(
+for i = 0, 9 do
+	-- Tread (walkable surface) — top surface at y=(i+1)*RISE
+	mapPart(
 		"Stair_" .. (i+1),
-		Vector3.new(10, 1, 4),
-		Vector3.new(0, i * 3.6 + 0.5, -28 - i * 4),
+		Vector3.new(10, 1, RUN),
+		Vector3.new(0, (i+1)*RISE - 0.5, -26 - i*RUN - RUN/2),
 		stepColor
 	)
-	-- Riser (vertical face)
+	-- Riser (vertical face between steps, height = RISE-1 so no gap)
 	mapPart(
 		"StairRiser_" .. (i+1),
-		Vector3.new(10, 3.6, 0.6),
-		Vector3.new(0, i * 3.6 + 1.8, -26 - i * 4),
+		Vector3.new(10, RISE - 1, 0.6),
+		Vector3.new(0, i*RISE + (RISE-1)/2, -26 - i*RUN),
 		stepColor
 	)
 end
--- Stair side walls
-mapPart("Stair_Wall_E", Vector3.new(0.6,52,70), Vector3.new(5.3,26,-53), Color3.fromRGB(28,22,48))
-mapPart("Stair_Wall_W", Vector3.new(0.6,52,70), Vector3.new(-5.3,26,-53),Color3.fromRGB(28,22,48))
-neonStrip("Stair_Glow", Vector3.new(0.3,0.3,68), Vector3.new(5,50,-53),   Color3.fromRGB(80,100,255))
+-- Top landing — bridges last tread to rooftop floor
+mapPart("Stair_Landing", Vector3.new(10,1,6), Vector3.new(0,50,-77), stepColor)
+-- Side guide rails (thin, low-profile)
+neonStrip("Stair_Rail_E", Vector3.new(0.3,1,60), Vector3.new(5.3,26,-54),  Color3.fromRGB(80,100,255))
+neonStrip("Stair_Rail_W", Vector3.new(0.3,1,60), Vector3.new(-5.3,26,-54), Color3.fromRGB(80,100,255))
 
 print("✅ [12/13] World structure — walls, ceilings, hallways, staircase, neon strips")
 
