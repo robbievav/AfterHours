@@ -13,7 +13,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService       = game:GetService("RunService")
 
 local EmoteConfig  = require(ReplicatedStorage.Shared.EmoteConfig)
-local EmoteChanged: RemoteEvent = ReplicatedStorage.Remotes.EmoteChanged
+local Remotes     = ReplicatedStorage:WaitForChild("Remotes")
+local EmoteChanged: RemoteEvent = Remotes:WaitForChild("EmoteChanged")
 
 local LocalPlayer  = Players.LocalPlayer
 local playerGui    = LocalPlayer:WaitForChild("PlayerGui")
@@ -123,7 +124,8 @@ centerLabel.Parent            = centerFrame
 -- Gather emotes into ordered list
 local emoteList = {}
 for key, data in EmoteConfig do
-	if type(data) ~= "table" then continue end
+	if key:sub(1, 1) == "_" then continue end  -- skip _categories and similar meta-keys
+	if type(data) ~= "table" or not data.DisplayName then continue end
 	table.insert(emoteList, { key = key, data = data })
 end
 -- Sort alphabetically within category for consistent layout
